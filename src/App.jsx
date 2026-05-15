@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import ChatSection from './components/ChatSection';
+import ChatToast from './components/ChatToast';
 
 function App() {
   const products = {
@@ -9,12 +11,6 @@ function App() {
       { id: 3, name: 'Kangkung Organik', desc: 'Kangkung hidroponik tanpa pestisida yang terjamin kesegarannya.', img: '/product_vegetables.png', rating: 4.9 },
       { id: 4, name: 'Selada Air', desc: 'Selada air premium, renyah dan cocok untuk salad Anda.', img: '/product_vegetables.png', rating: 5 },
     ],
-    fruits: [
-      { id: 5, name: 'Jeruk Manis', desc: 'Jeruk segar yang kaya akan vitamin C, manis dan menyegarkan.', img: '/product_fruits.png', rating: 4.9 },
-      { id: 6, name: 'Apel Fuji', desc: 'Apel fuji pilihan yang renyah dan manis alami.', img: '/product_fruits.png', rating: 5 },
-      { id: 7, name: 'Pisang Cavendish', desc: 'Pisang kualitas ekspor yang siap memenuhi kebutuhan energi Anda.', img: '/product_fruits.png', rating: 4.7 },
-      { id: 8, name: 'Anggur Merah', desc: 'Anggur merah tanpa biji dengan rasa manis yang khas.', img: '/product_fruits.png', rating: 4.8 },
-    ]
   };
 
   const renderProductCard = (product) => (
@@ -58,7 +54,7 @@ function App() {
           <div className="hero-container">
             <div className="hero-content">
               <h1>Pilih Berbagai Produk Segar dari <span>Greenhade</span></h1>
-              <p>Temukan produk agrikultur, buah-buahan, dan sayuran dengan kualitas premium terbaik langsung dari perusahaan kami yang telah terpercaya.</p>
+              <p>Temukan sayuran hijau organik hasil kebun hidroponik kami dengan kualitas premium, dipanen segar setiap hari langsung dari Greenhouse HADE.</p>
               <button className="btn-primary" style={{ marginRight: '16px' }}>Lihat Katalog ➔</button>
             </div>
             <div className="hero-image">
@@ -67,6 +63,9 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Chat Section (Web Q&A) */}
+      <ChatSection />
 
       {/* Features */}
       <section className="features">
@@ -79,10 +78,10 @@ function App() {
             </div>
           </div>
           <div className="feature-card">
-            <div className="feature-icon">🍎</div>
+            <div className="feature-icon">🌱</div>
             <div className="feature-text">
-              <h3>Buah Pilihan</h3>
-              <p>Manis alami & kaya vitamin</p>
+              <h3>Tanpa Pestisida</h3>
+              <p>Hidroponik & organik premium</p>
             </div>
           </div>
         </div>
@@ -106,16 +105,6 @@ function App() {
             </div>
           </div>
 
-          <div className="category-section">
-            <div className="category-header">
-              <h3>Buah-Buahan Segar</h3>
-              <button className="btn-outline">Lihat Semua ➔</button>
-            </div>
-            <div className="product-grid">
-              {products.fruits.map(renderProductCard)}
-            </div>
-          </div>
-
         </div>
       </section>
 
@@ -128,7 +117,7 @@ function App() {
                 <div className="logo-icon" style={{color: '#064e3b'}}>🌿</div>
                 Greenhade
               </div>
-              <p>Perusahaan penyedia berbagai kebutuhan pangan segar seperti sayuran dan buah-buahan dengan kualitas terbaik dan terjamin kesegarannya langsung dari sumbernya.</p>
+              <p>Kebun hidroponik penyedia sayuran hijau organik kualitas premium dari Greenhouse HADE, Citeureup. Dipanen segar, tanpa pestisida, langsung dari sumbernya.</p>
             </div>
             <div className="footer-links">
               <h4>Kontak & Info</h4>
@@ -147,6 +136,8 @@ function App() {
           </div>
         </div>
       </footer>
+
+      <ChatToast />
     </>
   );
 }
