@@ -268,12 +268,6 @@
   padding: 0 4px;
 }
 
-.product-rating {
-  color: #b08d3f;
-  font-size: 0.85rem;
-  margin-bottom: 6px;
-}
-
 .product-title {
   font-family: var(--font-display);
   font-size: 1.3rem;
@@ -306,8 +300,8 @@
 
 /* Footer — earthy dark, integrated dengan sage palette */
 .footer {
-  background: #2D3A26;
-  color: #E5E0D5;
+  background: var(--footer-bg);
+  color: var(--border-color);
   padding: 80px 0 40px;
 }
 
@@ -340,7 +334,7 @@
 
 .footer-logo .logo-icon {
   background: var(--primary-light);
-  color: #2D3A26;
+  color: var(--footer-bg);
 }
 
 .footer-links h4 {
@@ -406,7 +400,7 @@
 .subscribe-form button {
   padding: 11px 22px;
   background: var(--primary-light);
-  color: #2D3A26;
+  color: var(--footer-bg);
   border: none;
   border-radius: 0 4px 4px 0;
   font-weight: 600;

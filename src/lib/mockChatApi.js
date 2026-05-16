@@ -41,7 +41,7 @@ Saat ini layanan delivery belum tersedia — bisa pickup di lokasi Greenhouse HA
 - **WhatsApp:** ${FALLBACK_NUMBER}
 - **Email:** info@greenhade.id`,
 
-  about: `Greenhade adalah kebun hidroponik yang fokus pada sayuran hijau organik kualitas premium. Sayuran ditanam dengan metode hidroponik dan organik di Greenhouse HADE, Citeureup, Dayeuhkolot, Kabupaten Bandung. Panen hari yang sama, tanpa pestisida.`,
+  about: `Greenhouse HADE adalah kebun hidroponik yang fokus pada sayuran hijau organik kualitas premium. Sayuran ditanam dengan metode hidroponik dan organik di Greenhouse HADE, Citeureup, Dayeuhkolot, Kabupaten Bandung. Panen hari yang sama, tanpa pestisida.`,
 
   fallback: `Maaf, saya kurang yakin dengan pertanyaan ini. Untuk informasi lebih lanjut, silakan hubungi admin kami langsung di ${FALLBACK_NUMBER}.`,
 };
