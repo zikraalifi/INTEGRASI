@@ -53,9 +53,9 @@ function App() {
         <div className="container">
           <div className="hero-container">
             <div className="hero-content">
-              <h1>Pilih Berbagai Produk Segar dari <span>Greenhade</span></h1>
-              <p>Temukan sayuran hijau organik hasil kebun hidroponik kami dengan kualitas premium, dipanen segar setiap hari langsung dari Greenhouse HADE.</p>
-              <button className="btn-primary" style={{ marginRight: '16px' }}>Lihat Katalog ➔</button>
+              <h1>Kenalan dengan <span>Greenhouse HADE</span></h1>
+              <p>Kebun hidroponik kami di Citeureup, Bandung — menanam sayuran hijau organik berkualitas premium. Dipanen segar setiap hari, langsung dari kebun untuk Anda.</p>
+              <a href="#katalog" className="btn-primary" style={{ marginRight: '16px', display: 'inline-block' }}>Lihat Hasil Panen ➔</a>
             </div>
             <div className="hero-image">
               <img src="/hero_image.png" alt="Fresh Food Produce" />
@@ -91,8 +91,8 @@ function App() {
       <section className="catalog-section" id="katalog">
         <div className="container">
           <div className="section-header">
-            <h2 style={{ color: 'var(--primary-color)', fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '8px' }}>Temukan Produk Kami</h2>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Berdasarkan Kategori Pilihan Kebutuhan Anda</h2>
+            <h2 style={{ color: 'var(--primary-color)', fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '8px' }}>Hasil Panen</h2>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Sayuran dari Kebun Kami</h2>
           </div>
 
           <div className="category-section">
