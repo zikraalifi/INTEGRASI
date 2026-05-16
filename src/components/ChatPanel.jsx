@@ -60,7 +60,7 @@ function ChatPanel() {
       } else if (acc) {
         errorMsg = `${acc}\n\n_(Koneksi terputus. Hubungi admin di [+62 812 3456 7890](https://wa.me/6281234567890) untuk lanjut.)_`;
       } else {
-        errorMsg = 'Maaf, terjadi kendala. Silakan hubungi admin di [**+62 812 3456 7890**](https://wa.me/6281234567890) untuk bertanya seputar Greenhade.';
+        errorMsg = 'Untuk sementara, silakan hubungi admin di [**+62 812 3456 7890**](https://wa.me/6281234567890) untuk bertanya seputar Greenhade.';
       }
       setMessages((prev) => {
         const last = prev[prev.length - 1];
