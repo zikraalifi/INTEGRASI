@@ -1,28 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --primary-color: #059669;
-  --primary-light: #34d399;
-  --primary-dark: #047857;
-  --secondary-color: #ecfdf5;
-  --text-dark: #1f2937;
-  --text-muted: #6b7280;
-  --bg-color: #ffffff;
-  --bg-gray: #f9fafb;
-  --border-color: #e5e7eb;
-  
+  /* Earthy / Handcrafted palette (sage + cream) */
+  --primary-color: #6B8E5A;
+  --primary-light: #A9C09A;
+  --primary-dark: #4A6B3D;
+  --secondary-color: #F4F1EA;
+  --text-dark: #2C2E27;
+  --text-muted: #6F6E68;
+  --bg-color: #FAF7F0;
+  --bg-gray: #F4F1EA;
+  --border-color: #E5E0D5;
+
   --font-family: 'Outfit', sans-serif;
-  
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --font-display: 'Fraunces', Georgia, serif;
+
+  --shadow-sm: 0 1px 2px 0 rgba(44, 46, 39, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(44, 46, 39, 0.08), 0 2px 4px -1px rgba(44, 46, 39, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(44, 46, 39, 0.08), 0 4px 6px -2px rgba(44, 46, 39, 0.04);
+  --shadow-hover: 0 20px 25px -5px rgba(44, 46, 39, 0.10), 0 10px 10px -5px rgba(44, 46, 39, 0.04);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -32,6 +39,12 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 a {

@@ -9,14 +9,14 @@ function ChatSection() {
           <div className="chat-section-intro">
             <span className="chat-section-tag">💬 Tanya AI</span>
             <h2>
-              Punya pertanyaan? <span>Tanya asisten kami</span>
+              Butuh info <span>secepatnya?</span>
             </h2>
             <p>
-              Cek varian, harga, lokasi, dan cara pemesanan Greenhade langsung lewat chat di samping.
-              Asisten AI kami siap bantu 24/7 — kalau ada hal di luar jangkauan, akan diarahkan ke admin kami.
+              Dapatkan jawaban langsung tentang varian, harga, lokasi, dan cara pemesanan
+              Greenhouse HADE, tanpa menunggu balasan admin.
             </p>
             <ul className="chat-section-bullets">
-              <li>Info varian & harga ritel real-time</li>
+              <li>Cek varian & harga ritel dalam hitungan detik</li>
               <li>Detail lokasi & jam operasional</li>
               <li>Panduan pemesanan via WhatsApp admin</li>
             </ul>

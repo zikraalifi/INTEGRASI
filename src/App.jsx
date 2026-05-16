@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import ChatSection from './components/ChatSection';
 import ChatToast from './components/ChatToast';
+import MobileMenu from './components/MobileMenu';
 
 function App() {
   const products = {
@@ -20,15 +21,8 @@ function App() {
         <img src={product.img} alt={product.name} />
       </div>
       <div className="product-info">
-        <div className="product-rating">
-          {"★".repeat(Math.floor(product.rating))} {product.rating}
-        </div>
         <h4 className="product-title">{product.name}</h4>
         <p className="product-desc">{product.desc}</p>
-        <div className="product-meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          Greenhade, Bandung
-        </div>
       </div>
     </div>
   );
@@ -43,8 +37,27 @@ function App() {
             Greenhade
           </div>
           <div className="nav-links">
+            <a href="#home">Beranda</a>
+            <a href="#katalog">Hasil Panen</a>
           </div>
-          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ display: 'inline-block' }}>Hubungi Kami</a>
+          <div className="nav-actions">
+            <a href="#chat" className="btn-outline nav-tanya">Tanya Cepat</a>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Greenhouse+HADE+Citeureup+Dayeuhkolot+Kabupaten+Bandung"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline nav-maps"
+              aria-label="Buka lokasi di Google Maps"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Lokasi
+            </a>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="btn-primary nav-cta" style={{ display: 'inline-block' }}>Hubungi Kami</a>
+          </div>
+          <MobileMenu />
         </div>
       </nav>
 
@@ -54,8 +67,8 @@ function App() {
           <div className="hero-container">
             <div className="hero-content">
               <h1>Kenalan dengan <span>Greenhouse HADE</span></h1>
-              <p>Kebun hidroponik kami di Citeureup, Bandung — menanam sayuran hijau organik berkualitas premium. Dipanen segar setiap hari, langsung dari kebun untuk Anda.</p>
-              <a href="#katalog" className="btn-primary" style={{ marginRight: '16px', display: 'inline-block' }}>Lihat Hasil Panen ➔</a>
+              <p>Kebun hidroponik kami di Citeureup, Dayeuhkolot, Kabupaten Bandung, menanam sayuran hijau organik berkualitas premium. Dipanen segar setiap hari, langsung dari kebun untuk Anda.</p>
+              <a href="#katalog" className="btn-primary" style={{ display: 'inline-block' }}>Lihat Hasil Panen ➔</a>
             </div>
             <div className="hero-image">
               <img src="/hero_image.png" alt="Fresh Food Produce" />
@@ -66,26 +79,6 @@ function App() {
 
       {/* Chat Section (Web Q&A) */}
       <ChatSection />
-
-      {/* Features */}
-      <section className="features">
-        <div className="container features-container">
-          <div className="feature-card">
-            <div className="feature-icon">🥬</div>
-            <div className="feature-text">
-              <h3>Sayuran Segar</h3>
-              <p>Dipanen hari ini untuk Anda</p>
-            </div>
-          </div>
-          <div className="feature-card">
-            <div className="feature-icon">🌱</div>
-            <div className="feature-text">
-              <h3>Tanpa Pestisida</h3>
-              <p>Hidroponik & organik premium</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Catalog Section */}
       <section className="catalog-section" id="katalog">
@@ -114,17 +107,16 @@ function App() {
           <div className="footer-content">
             <div className="footer-brand">
               <div className="footer-logo">
-                <div className="logo-icon" style={{color: '#064e3b'}}>🌿</div>
                 Greenhade
               </div>
-              <p>Kebun hidroponik penyedia sayuran hijau organik kualitas premium dari Greenhouse HADE, Citeureup. Dipanen segar, tanpa pestisida, langsung dari sumbernya.</p>
+              <p>Kebun hidroponik penyedia sayuran hijau organik kualitas premium dari Greenhouse HADE di Citeureup, Dayeuhkolot, Kabupaten Bandung. Dipanen segar, tanpa pestisida, langsung dari sumbernya.</p>
             </div>
             <div className="footer-links">
               <h4>Kontak & Info</h4>
-              <p style={{color: '#a7f3d0', marginBottom: '8px'}}>info@greenhade.id</p>
-              <p style={{color: '#a7f3d0', marginBottom: '16px'}}>+62 812 3456 7890</p>
+              <p className="footer-info">info@greenhade.id</p>
+              <p className="footer-info">+62 812 3456 7890</p>
               <h4>Subscribe</h4>
-              <p style={{color: '#a7f3d0', fontSize: '0.85rem'}}>Dapatkan info terbaru dari kami</p>
+              <p className="footer-info footer-info-sub">Dapatkan info terbaru dari kami</p>
               <div className="subscribe-form">
                 <input type="email" placeholder="Email Anda" />
                 <button>→</button>
