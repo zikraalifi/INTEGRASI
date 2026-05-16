@@ -54,9 +54,14 @@ function ChatPanel() {
         });
       }
     } catch (err) {
-      const errorMsg = acc
-        ? `${acc}\n\n_(Koneksi terputus. Hubungi admin di +62 812 3456 7890 untuk lanjut.)_`
-        : 'Maaf, terjadi kendala. Silakan hubungi admin di **+62 812 3456 7890** untuk bertanya seputar Greenhouse HADE.';
+      let errorMsg;
+      if (err?.userFacing) {
+        errorMsg = err.message;
+      } else if (acc) {
+        errorMsg = `${acc}\n\n_(Koneksi terputus. Hubungi admin di [+62 812 3456 7890](https://wa.me/6281234567890) untuk lanjut.)_`;
+      } else {
+        errorMsg = 'Maaf, terjadi kendala. Silakan hubungi admin di [**+62 812 3456 7890**](https://wa.me/6281234567890) untuk bertanya seputar Greenhouse HADE.';
+      }
       setMessages((prev) => {
         const last = prev[prev.length - 1];
         return [...prev.slice(0, -1), { ...last, content: errorMsg }];

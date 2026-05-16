@@ -84,7 +84,7 @@ export async function handleChat(c) {
       console.error('[chat] error:', msg);
       await stream.writeSSE({
         event: 'error',
-        data: JSON.stringify({ message: 'Maaf, terjadi kendala. Silakan hubungi admin di +62 812 3456 7890 untuk bertanya seputar Greenhouse HADE.' }),
+        data: JSON.stringify({ message: 'Maaf, terjadi kendala. Silakan hubungi admin di [+62 812 3456 7890](https://wa.me/6281234567890) untuk bertanya seputar Greenhouse HADE.' }),
       });
     }
   });

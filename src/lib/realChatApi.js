@@ -7,6 +7,12 @@ export async function* realChatStream(message, history = []) {
     body: JSON.stringify({ message, history }),
   });
 
+  if (response.status === 429) {
+    const body = await response.json().catch(() => ({}));
+    const err = new Error(body.error || 'Terlalu banyak permintaan. Coba lagi sebentar.');
+    err.userFacing = true;
+    throw err;
+  }
   if (!response.ok || !response.body) {
     throw new Error(`HTTP ${response.status} ${response.statusText}`);
   }

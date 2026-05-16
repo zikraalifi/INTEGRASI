@@ -7,10 +7,10 @@ import MobileMenu from './components/MobileMenu';
 function App() {
   const products = {
     vegetables: [
-      { id: 1, name: 'Brokoli Segar', desc: 'Brokoli organik pilihan dengan kualitas premium langsung dari kebun kami.', img: '/product_vegetables.png', rating: 5 },
-      { id: 2, name: 'Bayam Merah', desc: 'Bayam merah segar, dipetik hari ini untuk nutrisi keluarga Anda.', img: '/product_vegetables.png', rating: 4.8 },
-      { id: 3, name: 'Kangkung Organik', desc: 'Kangkung hidroponik tanpa pestisida yang terjamin kesegarannya.', img: '/product_vegetables.png', rating: 4.9 },
-      { id: 4, name: 'Selada Air', desc: 'Selada air premium, renyah dan cocok untuk salad Anda.', img: '/product_vegetables.png', rating: 5 },
+      { id: 1, name: 'Brokoli Segar', desc: 'Brokoli organik pilihan dengan kualitas premium langsung dari kebun kami.', img: '/product_vegetables.png', imgWebp: '/product_vegetables.webp' },
+      { id: 2, name: 'Bayam Merah', desc: 'Bayam merah segar, dipetik hari ini untuk nutrisi keluarga Anda.', img: '/product_vegetables.png', imgWebp: '/product_vegetables.webp' },
+      { id: 3, name: 'Kangkung Organik', desc: 'Kangkung hidroponik tanpa pestisida yang terjamin kesegarannya.', img: '/product_vegetables.png', imgWebp: '/product_vegetables.webp' },
+      { id: 4, name: 'Selada Air', desc: 'Selada air premium, renyah dan cocok untuk salad Anda.', img: '/product_vegetables.png', imgWebp: '/product_vegetables.webp' },
     ],
   };
 
@@ -18,7 +18,10 @@ function App() {
     <div className="product-card" key={product.id}>
       <div className="product-image">
         <span className="product-badge">Tersedia</span>
-        <img src={product.img} alt={product.name} />
+        <picture>
+          <source srcSet={product.imgWebp} type="image/webp" />
+          <img src={product.img} alt={`Foto ${product.name}`} width="1024" height="1024" loading="lazy" decoding="async" />
+        </picture>
       </div>
       <div className="product-info">
         <h4 className="product-title">{product.name}</h4>
@@ -29,13 +32,16 @@ function App() {
 
   return (
     <>
+      {/* Skip link (a11y) — must be the very first focusable element */}
+      <a href="#main" className="skip-link">Lewati ke konten utama</a>
+
       {/* Navbar */}
       <nav className="navbar">
         <div className="container nav-content">
-          <div className="logo">
-            <div className="logo-icon">🌿</div>
+          <a href="#home" className="logo" aria-label="Greenhade — beranda">
+            <span className="logo-icon" aria-hidden="true">🌿</span>
             Greenhade
-          </div>
+          </a>
           <div className="nav-links">
             <a href="#home">Beranda</a>
             <a href="#katalog">Hasil Panen</a>
@@ -61,6 +67,9 @@ function App() {
         </div>
       </nav>
 
+      {/* Main content landmark for skip link */}
+      <main id="main">
+
       {/* Hero Section */}
       <section className="hero" id="home">
         <div className="container">
@@ -71,7 +80,10 @@ function App() {
               <a href="#katalog" className="btn-primary" style={{ display: 'inline-block' }}>Lihat Hasil Panen ➔</a>
             </div>
             <div className="hero-image">
-              <img src="/hero_image.png" alt="Fresh Food Produce" />
+              <picture>
+                <source srcSet="/hero_image.webp" type="image/webp" />
+                <img src="/hero_image.png" alt="Sayuran segar hasil panen Greenhouse HADE" width="1024" height="1024" decoding="async" fetchPriority="high" />
+              </picture>
             </div>
           </div>
         </div>
@@ -84,14 +96,13 @@ function App() {
       <section className="catalog-section" id="katalog">
         <div className="container">
           <div className="section-header">
-            <h2 style={{ color: 'var(--primary-color)', fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '8px' }}>Hasil Panen</h2>
+            <span className="section-eyebrow" style={{ color: 'var(--primary-dark)', fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '8px', display: 'block', fontWeight: 600 }}>Hasil Panen</span>
             <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Sayuran dari Kebun Kami</h2>
           </div>
 
           <div className="category-section">
             <div className="category-header">
               <h3>Sayuran Hijau & Organik</h3>
-              <button className="btn-outline">Lihat Semua ➔</button>
             </div>
             <div className="product-grid">
               {products.vegetables.map(renderProductCard)}
@@ -100,6 +111,8 @@ function App() {
 
         </div>
       </section>
+
+      </main>
 
       {/* Footer */}
       <footer className="footer" id="about">
@@ -112,15 +125,20 @@ function App() {
               <p>Kebun hidroponik penyedia sayuran hijau organik kualitas premium dari Greenhouse HADE di Citeureup, Dayeuhkolot, Kabupaten Bandung. Dipanen segar, tanpa pestisida, langsung dari sumbernya.</p>
             </div>
             <div className="footer-links">
-              <h4>Kontak & Info</h4>
-              <p className="footer-info">info@greenhade.id</p>
-              <p className="footer-info">+62 812 3456 7890</p>
-              <h4>Subscribe</h4>
+              <h3>Kontak & Info</h3>
+              <p className="footer-info">
+                <a href="mailto:info@greenhade.id">info@greenhade.id</a>
+              </p>
+              <p className="footer-info">
+                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">+62 812 3456 7890</a>
+              </p>
+              <h3>Subscribe</h3>
               <p className="footer-info footer-info-sub">Dapatkan info terbaru dari kami</p>
-              <div className="subscribe-form">
-                <input type="email" placeholder="Email Anda" />
-                <button>→</button>
-              </div>
+              <form className="subscribe-form" onSubmit={(e) => e.preventDefault()}>
+                <label htmlFor="subscribe-email" className="sr-only">Email untuk subscribe</label>
+                <input id="subscribe-email" type="email" placeholder="Email Anda" />
+                <button type="submit" aria-label="Subscribe">→</button>
+              </form>
             </div>
           </div>
           <div className="footer-bottom">
