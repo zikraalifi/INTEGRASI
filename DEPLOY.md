@@ -1,6 +1,6 @@
 # Deploy & Hand-off — Greenhouse HADE Website
 
-Dokumen ini buat siapa pun yang handle deployment / ops project ini (kampus, owner, atau kolaborator lain). Project = Vite + React SPA (frontend) + Node + Hono server (backend) dengan chat widget Q&A di-power Claude Haiku 4.5.
+Project = Vite + React SPA (frontend) + Node + Hono server (backend) dengan chat widget Q&A di-power Claude Haiku 4.5.
 
 ---
 
@@ -97,7 +97,7 @@ npm run preview    # local preview dist/ di port 4173
 
 ## Update content (non-dev workflow)
 
-KB content + bot persona/rules/examples ada di `docs/*.md`. **Tidak perlu sentuh code JS.** Edit file markdown, restart server (atau biarin `--watch-path=./docs` auto-reload).
+KB content + bot persona/rules/examples ada di `docs/*.md`. **Tidak perlu sentuh code JS.** Edit file markdown, restart server (atau biarkan `--watch-path=./docs` auto-reload).
 
 | File | Isinya |
 |---|---|
@@ -111,6 +111,3 @@ KB content + bot persona/rules/examples ada di `docs/*.md`. **Tidak perlu sentuh
 ---
 
 ## References
-
-- Full project planning + decisions log: `td/WEB_QNA_SERVICE_PLAN.md` (gitignored — minta dari maintainer)
-- Sibling Telegram bot project: `~/Documents/jk/Green-Hade` (Greenhouse HADE Telegram CS agent, standalone)
