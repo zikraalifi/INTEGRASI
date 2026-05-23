@@ -61,7 +61,7 @@ function App() {
               </svg>
               Lokasi
             </a>
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="btn-primary nav-cta" style={{ display: 'inline-block' }}>Hubungi Kami</a>
+            <a href="https://wa.me/6282219008737" target="_blank" rel="noopener noreferrer" className="btn-primary nav-cta" style={{ display: 'inline-block' }}>Hubungi Kami</a>
           </div>
           <MobileMenu />
         </div>
@@ -80,10 +80,7 @@ function App() {
               <a href="#katalog" className="btn-primary" style={{ display: 'inline-block' }}>Lihat Hasil Panen ➔</a>
             </div>
             <div className="hero-image">
-              <picture>
-                <source srcSet="/hero_image.webp" type="image/webp" />
-                <img src="/hero_image.png" alt="Sayuran segar hasil panen Greenhouse HADE" width="1024" height="1024" decoding="async" fetchPriority="high" />
-              </picture>
+              <img src="/hero.jpg" alt="Sayuran segar hasil panen Greenhouse HADE" width="1200" height="800" decoding="async" fetchPriority="high" />
             </div>
           </div>
         </div>
@@ -130,7 +127,7 @@ function App() {
                 <a href="mailto:info@greenhade.id">info@greenhade.id</a>
               </p>
               <p className="footer-info">
-                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">+62 812 3456 7890</a>
+                <a href="https://wa.me/6282219008737" target="_blank" rel="noopener noreferrer">+62 822 1900 8737</a>
               </p>
               <h3>Subscribe</h3>
               <p className="footer-info footer-info-sub">Dapatkan info terbaru dari kami</p>
