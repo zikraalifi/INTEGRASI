@@ -1,4 +1,4 @@
-const FALLBACK_NUMBER = '[+62 812 3456 7890](https://wa.me/6281234567890)';
+const FALLBACK_NUMBER = '[+62 822 1900 8737](https://wa.me/6282219008737)';
 
 const RESPONSES = {
   greeting: `Halo! Saya asisten Greenhade. Ada yang bisa saya bantu seputar produk, harga, atau lokasi kami?`,

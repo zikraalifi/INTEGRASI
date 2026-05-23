@@ -80,7 +80,7 @@ function MobileMenu() {
                 Lokasi
               </a>
               <a
-                href="https://wa.me/6281234567890"
+                href="https://wa.me/6282219008737"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary mobile-menu-cta-item"
