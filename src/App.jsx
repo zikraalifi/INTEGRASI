@@ -7,10 +7,29 @@ import MobileMenu from './components/MobileMenu';
 function App() {
   const products = {
     vegetables: [
-      { id: 1, name: 'Brokoli Segar', desc: 'Brokoli organik pilihan dengan kualitas premium langsung dari kebun kami.', img: '/product_vegetables.png', imgWebp: '/product_vegetables.webp' },
-      { id: 2, name: 'Bayam Merah', desc: 'Bayam merah segar, dipetik hari ini untuk nutrisi keluarga Anda.', img: '/product_vegetables.png', imgWebp: '/product_vegetables.webp' },
-      { id: 3, name: 'Kangkung Organik', desc: 'Kangkung hidroponik tanpa pestisida yang terjamin kesegarannya.', img: '/product_vegetables.png', imgWebp: '/product_vegetables.webp' },
-      { id: 4, name: 'Selada Air', desc: 'Selada air premium, renyah dan cocok untuk salad Anda.', img: '/product_vegetables.png', imgWebp: '/product_vegetables.webp' },
+      {
+        id: 1,
+        name: 'Pakcoy Organik',
+        desc: 'Pakcoy organik pilihan dengan kualitas premium langsung dari kebun kami.',
+        img: '/images/pakcoy.jpg'
+      },
+      {
+        id: 2,
+        name: 'Bayam Merah',
+        desc: 'Bayam merah segar, dipetik hari ini untuk nutrisi keluarga Anda.',
+        img: '/images/bayam-merah.png'
+      },
+      {
+        id: 3,
+        name: 'Kangkung Organik',
+        desc: 'Kangkung hidroponik tanpa pestisida yang terjamin kesegarannya.',
+        img: '/images/kangkung.jpeg'
+      },
+      {
+        id: 4,
+        name: 'Selada Air',
+        desc: 'Selada air premium, renyah dan cocok untuk salad Anda.',
+        img: '/images/selada.jpeg'},
     ],
   };
 
